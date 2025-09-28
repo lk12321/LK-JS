@@ -3,13 +3,18 @@
    <head>
      <script type="text/javascript">
        function show_alert()
-       { alert("Uwaga!"); } 
+       { alert("Uwaga!"); }  
+        function okno_zamknij() 
+ {
+ window.close()
+ }
      </script>
    </head>
- <body>
+<body bgcolor=#ffb3d5>
    <b> Zastosowanie: </b><br>
 Jest używany do przekazywania informacji użytkownikowi. <br>
 Użytkownik musi nacisnąć ok. aby potwierdził jej przeczytanie.<br>
    <input type="button" onclick="show_alert()" value="Pokaż Alert Box"/>
+   <input type="button" value="zamknij okno" onclick="okno_zamknij()">
  </body>
 </html>
