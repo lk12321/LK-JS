@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
   <head>
     <script type="text/javascript">
    function show_confirm()
@@ -8,14 +9,19 @@
                 {  document.write("Nacisnąłeś OK!");  }
            else
              {  document.write("Nacisnąłeś Cancel!");  }
-      }
+       }
+    function okno_zamknij() 
+ {
+ window.close()
+ }
     </script>
   </head>
-  <body>
+<body bgcolor=#ffb3d5>
     <b>Zastosowanie: </b><br>
 Jest używany, jeśli chcemy zapytać użytkownika o weryfikacje, lub akceptację jakichś danych.<br>
 Użytkownik musi nacisnąć  „OK.” w celu akceptacji bądź „Cancel” w celu odrzucenia.<br>
 Jeżeli zostanie wybrane „OK.” metoda zwraca true w przeciwnym wypadku false.<br>
     <input type="button" onclick="show_confirm()" value="Pokaż confirm box" />
+     <input type="button" value="zamknij okno" onclick="okno_zamknij()">
  </body>
 </html>
