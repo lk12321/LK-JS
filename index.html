@@ -46,9 +46,13 @@ window.open("zadanie10_koc.html","okienko_z10","toolbar=no,directories=no,menuba
  {
 window.open("zadanie11_koc.html","okienko_z11","toolbar=no,directories=no,menubar=no,height=200,width=500,top=200,left=200");
  }
+         function WinOpen_z11KOD()
+ {
+window.open("zadanie11_koc_KOD.html","okienko_z11KOD","toolbar=no,directories=no,menubar=no,height=450,width=400,top=200,left=200");
+ }
           function show_prompt()
           {
-             var name=prompt("Napisz imię","Imię Nazwisko");
+             var name=prompt("Napisz imię","Imię");
                  if (name!=null && name!="")
                      {
                           document.write("Witaj " + name + "! jak się masz?");
@@ -74,6 +78,7 @@ window.open("zadanie11_koc.html","okienko_z11","toolbar=no,directories=no,menuba
       <input type="button_z6" name="zadanie6" value="zadanie6-kociszewska" onclick="show_prompt(' ')">
       <input type="button_z10" name="zadanie10" value="zadanie10-kociszewska" onclick="WinOpen_z10(' ')">
       <input type="button_z11" name="zadanie11" value="zadanie11-kociszewska" onclick="WinOpen_z11(' ')">
+      <input type="button_z11KOD" name="zadanie11KOD" value="zadanie11-kociszewska-KOD" onclick="WinOpen_z11KOD(' ')">
       <input type="button" value="zamknij okno" onclick="okno_zamknij()">
    </body>
 </html>
