@@ -5,25 +5,32 @@
 window.close() 
              }
     </script>
-  <body> 
-    <form>
-      <textarea name="kociszewska" cols="80" rows="20" readonly> 
-  
-                      przyklad3.html 
- 
-            <HTML> 
-             <HEAD> 
-                  <TITLE>SKRYPT trzeci --> zewnętrzny</TITLE> 
-             </HEAD> 
-     <BODY> 
-            <SCRIPT type="text/javascript" src="przyklad3_zewnetrzny.js"></SCRIPT> 
-   </BODY> 
-</HTML> 
-przyklad3_zewnetrzny.js 
-             document.write("ostatnia modyfikacja strony".fontcolor("red").bold().fontsize(7)+"<br>"); 
-             document.write(document.lastModified); 
-      </textarea>
-    </form>
-    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
-  </body> 
+    <body bgcolor=#ffb3d5>
+        <form>
+            <textarea name="kociszewska" cols="80" rows="20" readonly> 
+<!DOCTYPE html>
+<html>
+<body bgcolor=#ffb3d5>
+  <div style="color:green;font-size:42px;">
+    <script language="JavaScript">
+  var D1_koc=prompt("dzień 1 =","");
+  var D2_koc=prompt("dzień 2 =","");
+      var d1 = new Date(2025, 0, parseInt(D1_koc));
+      var d2 = new Date(2025, 0, parseInt(D2_koc));
+      var wynik = (d2 - d1) / 1000;
+      document.write(wynik);
+      function okno_zamknij() 
+ {
+ window.close()
+ }
+    </script>
+  </div>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+ </body>
+</html>
+          
+            </textarea>
+        </form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+    </body> 
 </html>
