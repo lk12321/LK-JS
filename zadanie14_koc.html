@@ -5,14 +5,16 @@
     <script language="JavaScript">
         var m_koc=prompt("Podaj zmienną m: ","");
         var m=parseInt(m_koc);
-      var a = m + 2;
-      var licznik = a - m;
-      var mianownik = a * m;
-      var n = mianownik / licznik;
-      n = Math.round(n);
-      var c = n + 1;
-      var d = n * c;
-      document.write("1/" + m + " = 1/" + a + " + 1/" + c + " + 1/" + d);
+    var n1 = Math.floor(m / 1) + 1;
+    var a = n1;
+    var licznik = a - m;
+    var mianownik = a * m;
+    var x = Math.floor((a * m) / (a - m)) + 1;
+    var b = x;
+    var c = (a * m * b) / ((a - m) * b - a * m);
+    b = Math.floor(b);
+    c = Math.floor(c);
+    document.write("1/" + m + " = 1/" + a + " + 1/" + b + " + 1/" + c);
 function okno_zamknij() 
  {
  window.close()
