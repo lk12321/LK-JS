@@ -1,0 +1,29 @@
+<html>
+    <script type="text/javascript">
+         function okno_zamknij()
+             {
+window.close() 
+             }
+    </script>
+  <body> 
+    <form>
+      <textarea name="kociszewska" cols="80" rows="20" readonly> 
+  
+                      przyklad3.html 
+ 
+            <HTML> 
+             <HEAD> 
+                  <TITLE>SKRYPT trzeci --> zewnętrzny</TITLE> 
+             </HEAD> 
+     <BODY> 
+            <SCRIPT type="text/javascript" src="przyklad3_zewnetrzny.js"></SCRIPT> 
+   </BODY> 
+</HTML> 
+przyklad3_zewnetrzny.js 
+             document.write("ostatnia modyfikacja strony".fontcolor("red").bold().fontsize(7)+"<br>"); 
+             document.write(document.lastModified); 
+      </textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+  </body> 
+</html>
