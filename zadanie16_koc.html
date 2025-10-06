@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor=#ffb3d5>
+  <div style="color:navy;font-size:24px;">
+    <script language="JavaScript">
+  var a = prompt("Podaj A = ");
+  var b = prompt("Podaj B = ");
+  a = parseInt(a);
+  b = parseInt(b);
+    var a3 = Math.pow(a, 3);
+    var b3 = Math.pow(b, 3);
+    var term1 = a3;
+    var term2 = 3 * Math.pow(a, 2) * b;
+    var term3 = 3 * a * Math.pow(b, 2);
+    var term4 = b3;
+    var sum = term1 + term2 + term3 + term4;
+    document.write("(" + a + " + " + b + ")<sup>3</sup> = ");
+    document.write(a + "<sup>3</sup> + 3×((" + a + ")<sup>2</sup>)×(" + b + ") + 3×(" + a + ")×((" + b + ")<sup>2</sup>) + " + b + "<sup>3</sup> = ");
+    document.write(term1 + " + " + term2 + " + " + term3 + " + " + term4 + " = " + sum);
+function okno_zamknij() 
+ {
+ window.close()
+ }
+    </script>
+    </div>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
