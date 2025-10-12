@@ -7,8 +7,27 @@ window.close()
     </script>
     <body bgcolor=#ffb3d5>
         <form>
-            <textarea name="kociszewska" cols="80" rows="20" readonly> 
-
+            <textarea name="kociszewska" cols="80" rows="23" readonly> 
+<!DOCTYPE html>
+<html>
+<body bgcolor=#ffb3d5>
+  <div style="color:magenta;font-size:40px;">
+    <script language="JavaScript">
+        var m_koc=prompt("zmienna m: ","");
+        var m=parseInt(m_koc);
+        var a = m + 2;
+        var b = 1.25 * m * (m + 2);
+        var c = m * (m + 1); 
+        document.write("1/" + m + " = 1/" + a + " + 1/" + b + " + 1/" + c);
+      function okno_zamknij() 
+ {
+ window.close()
+ }
+    </script>
+    </div>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
             </textarea>
         </form>
 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
