@@ -1,0 +1,50 @@
+<html>
+    <script type="text/javascript">
+         function okno_zamknij()
+             {
+window.close() 
+             }
+    </script>
+    <body bgcolor=#ffb3d5>
+        <form>
+            <textarea name="kociszewska" cols="80" rows="40" readonly> 
+<!DOCTYPE html>
+<html lang="pl">
+<meta charset="UTF-8">
+<script>
+    function dlugoscDrabiny(D, X) {
+        return Math.sqrt(D*D + X*X);
+    }
+    function katAlfa(D, X) {
+        let rad = Math.atan(D / X);
+        return rad * (180 / Math.PI);
+    }
+    function oblicz() {
+        let D = parseFloat(document.getElementById("d").value);
+        let X = parseFloat(document.getElementById("x").value);
+        let drabina = dlugoscDrabiny(D, X);
+        let alfa = katAlfa(D, X);
+        document.getElementById("drabina").value = drabina.toFixed(2);
+        document.getElementById("alfa").value = alfa.toFixed(2);
+    }
+  function okno_zamknij() 
+ {
+ window.close()
+ }
+</script>
+<body bgcolor=#ffb3d5>
+  <h3>Obliczanie długości drabiny i kąta</h3>
+    <label>Podaj d= <input type="number" id="d" step="any"></label>
+    <label>Podaj x= <input type="number" id="x" step="any"></label><br>
+    <button onclick="oblicz()">oblicz</button>
+    <br><br>
+    <label>Drabina= <input type="text" id="drabina" readonly></label>
+    <label>Alfa= <input type="text" id="alfa" readonly></label><br><br>
+     <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
+            </textarea> 
+        </form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+    </body> 
+</html>
