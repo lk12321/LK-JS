@@ -57,7 +57,7 @@
         let BC_koc_wynik = BC_koc(xb_koc, yb_koc, xc_koc, yc_koc);
         let AC_koc_wynik = AC_koc(xa_koc, ya_koc, xc_koc, yc_koc);
         document.getElementById("wyniki_koc").innerHTML =
-            "<b>Długości boków trójkąta:</b><br>" + "<div class='wynik_koc'>AB = " + AB_koc_wynik.toFixed(2) + "</div><br>" + "<div class='wynik_koc'>BC = " + BC_koc_wynik.toFixed(2) + "</div><br>" + "<div class='wynik_koc'>AC = " + AC_koc_wynik.toFixed(2) + "</div><br>";
+            "<h3><div class='wynik_koc'>Długości boków trójkąta:</h3><br>" + "AB = " + AB_koc_wynik.toFixed(2) + "<br>" + "BC = " + BC_koc_wynik.toFixed(2) + "<br>" + "AC = " + AC_koc_wynik.toFixed(2) + "</div><br>";
     }
 </script>
        <input type="button" value="zamknij okno" onclick="okno_zamknij()">
