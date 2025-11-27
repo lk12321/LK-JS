@@ -53,12 +53,17 @@
         let yb_koc = parseFloat(document.getElementById("yb_koc").value);
         let xc_koc = parseFloat(document.getElementById("xc_koc").value);
         let yc_koc = parseFloat(document.getElementById("yc_koc").value);
-        let AB_koc_wynik = AB_koc(xa_koc, ya_koc, xb_koc, yb_koc);
-        let BC_koc_wynik = BC_koc(xb_koc, yb_koc, xc_koc, yc_koc);
-        let AC_koc_wynik = AC_koc(xa_koc, ya_koc, xc_koc, yc_koc);
+        let AB_koc_wynik = AB_koc(xa_koc, ya_koc, xb_koc, yb_koc).toFixed(2);
+        let BC_koc_wynik = BC_koc(xb_koc, yb_koc, xc_koc, yc_koc).toFixed(2);
+        let AC_koc_wynik = AC_koc(xa_koc, ya_koc, xc_koc, yc_koc).toFixed(2);
         document.getElementById("wyniki_koc").innerHTML =
-            "<h3><div class='wynik_koc'>Długości boków trójkąta:</h3><br>" + "AB = " + AB_koc_wynik.toFixed(2) + "<br>" + "BC = " + BC_koc_wynik.toFixed(2) + "<br>" + "AC = " + AC_koc_wynik.toFixed(2) + "</div><br>";
-    }
+        "<div class='wynik_koc'>" +
+        "Długości boków trójkąta:<br>" +
+        "AB = " + AB_koc_wynik + "<br>" +
+        "BC = " + BC_koc_wynik + "<br>" +
+        "AC = " + AC_koc_wynik + "<br>" +
+        "</div>";
+}
 </script>
        <input type="button" value="zamknij okno" onclick="okno_zamknij()">
 </body>
