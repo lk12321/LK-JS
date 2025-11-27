@@ -1,0 +1,35 @@
+<html>
+    <meta charset="UTF-8">
+    <script>
+        function Pole_koc(a_koc, b_koc) {
+            return a_koc * b_koc;
+        }
+        function Obwod_koc(a_koc, b_koc) {
+            return 2 * (a_koc + b_koc);
+        }
+        function oblicz_koc() {
+            let a_koc = parseFloat(document.getElementById("a_dana_koc").value);
+            let b_koc = parseFloat(document.getElementById("b_dana_koc").value);
+            let pole_koc_wynik = Pole_koc(a_koc, b_koc);
+            let obwod_koc_wynik = Obwod_koc(a_koc, b_koc);
+            document.getElementById("pole").value = pole_koc_wynik;
+            document.getElementById("obw").value = obwod_koc_wynik;
+            document.getElementById("wyprowadz_pole_koc").innerHTML = "Pole prostokąta = " + pole_koc_wynik;
+            document.getElementById("wyprowadz_obwod_koc").innerHTML = "Obwód prostokąta = " + obwod_koc_wynik;
+          function okno_zamknij() 
+ {
+ window.close()
+ }
+        }
+    </script>
+<body bgcolor=#ffb3d5>
+    Bok a: <input type="number" id="a_dana_koc"><br>
+    Bok b: <input type="number" id="b_dana_koc"><br><br>
+    <button onclick="oblicz_koc()">Oblicz</button><br><br>
+    <div id="wyprowadz_pole_koc"></div>
+    <div id="wyprowadz_obwod_koc"></div>
+    Pole: <input type="text" id="pole" readonly><br>
+    Obwód: <input type="text" id="obw" readonly><br>
+   <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
