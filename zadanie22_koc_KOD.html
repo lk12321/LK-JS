@@ -1,0 +1,44 @@
+<html>
+    <script type="text/javascript">
+         function okno_zamknij()
+             {
+window.close() 
+             }
+    </script>
+    <body bgcolor=#ffb3d5>
+        <form>
+            <textarea name="kociszewska" cols="80" rows="30" readonly> 
+<html>
+    <meta charset="UTF-8">
+    <script>
+        function Pole_koc(a_koc, b_koc) {
+            return a_koc * b_koc;
+        }
+        function Obwod_koc(a_koc, b_koc) {
+            return 2 * (a_koc + b_koc);
+        }
+        function oblicz_koc() {
+            let a_koc = parseFloat(document.getElementById("a_dana_koc").value);
+            let b_koc = parseFloat(document.getElementById("b_dana_koc").value);
+            document.getElementById("pole").value = Pole_koc(a_koc, b_koc);
+            document.getElementById("obw").value = Obwod_koc(a_koc, b_koc);
+        }
+          function okno_zamknij() 
+ {
+ window.close()
+ }
+    </script>
+<body bgcolor=#ffb3d5>
+    Bok a: <input type="number" id="a_dana_koc"><br>
+    Bok b: <input type="number" id="b_dana_koc"><br><br>
+    <button onclick="oblicz_koc()">Oblicz</button><br><br>
+    Pole: <input type="text" id="pole" readonly><br>
+    Obwód: <input type="text" id="obw" readonly><br><br>
+   <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
+            </textarea>
+        </form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+    </body> 
+</html>
