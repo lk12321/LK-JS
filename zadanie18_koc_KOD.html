@@ -1,0 +1,56 @@
+<html>
+    <script type="text/javascript">
+         function okno_zamknij()
+             {
+window.close() 
+             }
+    </script>
+    <body bgcolor=#ffb3d5>
+        <form>
+            <textarea name="kociszewska" cols="80" rows="42" readonly> 
+<!DOCTYPE html>
+<html>
+ <meta charset="utf-8">
+<script>
+    function okno_zamknij() 
+ {
+ window.close()
+ }
+    </script>
+<body bgcolor=#ffb3d5>
+ <div style="color:navy;font-size:50px;">
+ <script language="JavaScript">
+   
+ var a=parseFloat(prompt("a=",""));
+ var b=parseFloat(prompt("b=",""));
+   
+ function suma_koc(a, b) {
+ return a + b;
+ }
+   function odejmowanie_koc(a, b) {
+ return a - b;
+ }
+   function mnozenie_koc(a, b) {
+ return a * b;
+ }
+   function od_kwadratu_koc(a, b) {
+ return [a*a, b*b];
+ }
+   function reszta_z_dzielenia_koc(a, b) {
+ return a % b;
+ }
+   document.write("suma= "+suma_koc(a,b)+"<br>");
+   document.write("różnica= "+odejmowanie_koc(a, b)+"<br>");
+   document.write("iloczyn= "+mnozenie_koc(a, b)+"<br>");
+   document.write("sumy do kwadratu= "+od_kwadratu_koc(a, b)+"<br>");
+   document.write("reszta z dzielenia a/b= "+reszta_z_dzielenia_koc(a, b)+"<br>");
+</script>
+</div>
+   <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
+            </textarea>
+        </form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+    </body> 
+</html>
