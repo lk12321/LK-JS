@@ -12,10 +12,6 @@
     function oblicz() {
         let D = parseFloat(document.getElementById("d").value);
         let X = parseFloat(document.getElementById("x").value);
-        if (isNaN(D) || isNaN(X) || X === 0) {
-            alert("Wprowadź poprawne liczby (X nie może być 0)");
-            return;
-        }
         let drabina = dlugoscDrabiny(D, X);
         let alfa = katAlfa(D, X);
         document.getElementById("drabina").value = drabina.toFixed(2);
