@@ -3,7 +3,13 @@
  <meta charset="UTF-8">
  <link rel="stylesheet" href="styl.css">
 </head>
-<body>
+ <script>
+    function okno_zamknij() 
+ {
+ window.close()
+ }
+    </script>
+<body bgcolor=#ffb3d5>
 <script type="text/javascript">
  function pole_kociszewska()
  {
@@ -23,5 +29,6 @@ var b_koc= 4*a_koc;
  <input type="button" name="pole" value="Oblicz pole" Onclick="pole_kociszewska()"><br><br>
  <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_kociszewska()"><br><br>
  <div style="color:red;font-size:50px;"id="nazwa"></div>
+   <input type="button" value="zamknij okno" onclick="okno_zamknij()">
 </body>
 </html>
