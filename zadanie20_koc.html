@@ -3,41 +3,52 @@
     <meta charset="UTF-8">
 <body>
 <form>
-    Punkt A: 
-    x: <input type="number" id="xa_koc"> 
-    y: <input type="number" id="ya_koc"><br><br>
+    <b>Punkt A:</b><br>
+    xA: <input type="number" id="xa_koc">
+    yA: <input type="number" id="ya_koc"><br><br>
 
-    Punkt B: 
-    x: <input type="number" id="xb_koc"> 
-    y: <input type="number" id="yb_koc"><br><br>
+    <b>Punkt B:</b><br>
+    xB: <input type="number" id="xb_koc">
+    yB: <input type="number" id="yb_koc"><br><br>
 
-    Punkt C: 
-    x: <input type="number" id="xc_koc"> 
-    y: <input type="number" id="yc_koc"><br><br>
+    <b>Punkt C:</b><br>
+    xC: <input type="number" id="xc_koc">
+    yC: <input type="number" id="yc_koc"><br><br>
 
-    <button type="button" onclick="oblicz()">Oblicz boki</button>
+    <button type="button" onclick="oblicz_koc()">Oblicz boki trójkąta</button>
 </form>
 
-<h3>Wyniki:</h3>
-<div id="wyniki"></div>
+<h3>Wyniki obliczeń:</h3>
+<div id="wyniki_koc"></div>
 
 <script>
-    // |AB| = sqrt( (xa - xb)^2 + (ya - yb)^2 )
-    function AB_koc(xa, ya, xb, yb) {
-        return Math.sqrt(Math.pow(xa - xb, 2) + Math.pow(ya - yb, 2));
+
+    // |AB| = sqrt((xa_koc - xb_koc)^2 + (ya_koc - yb_koc)^2)
+    function AB_koc(xa_koc, ya_koc, xb_koc, yb_koc) {
+        return Math.sqrt(
+            Math.pow(xa_koc - xb_koc, 2) +
+            Math.pow(ya_koc - yb_koc, 2)
+        );
     }
 
-    // |BC| = sqrt( (xb - xc)^2 + (yb - yc)^2 )
-    function BC_koc(xb, yb, xc, yc) {
-        return Math.sqrt(Math.pow(xb - xc, 2) + Math.pow(yb - yc, 2));
+    // |BC| = sqrt((xb_koc - xc_koc)^2 + (yb_koc - yc_koc)^2)
+    function BC_koc(xb_koc, yb_koc, xc_koc, yc_koc) {
+        return Math.sqrt(
+            Math.pow(xb_koc - xc_koc, 2) +
+            Math.pow(yb_koc - yc_koc, 2)
+        );
     }
 
-    // |AC| = sqrt( (xa - xc)^2 + (ya - yc)^2 )
-    function AC_koc(xa, ya, xc, yc) {
-        return Math.sqrt(Math.pow(xa - xc, 2) + Math.pow(ya - yc, 2));
+    // |AC| = sqrt((xa_koc - xc_koc)^2 + (ya_koc - yc_koc)^2)
+    function AC_koc(xa_koc, ya_koc, xc_koc, yc_koc) {
+        return Math.sqrt(
+            Math.pow(xa_koc - xc_koc, 2) +
+            Math.pow(ya_koc - yc_koc, 2)
+        );
     }
 
-    function oblicz() {
+    function oblicz_koc() {
+        // Pobieranie wartości z formularza
         let xa_koc = parseFloat(document.getElementById("xa_koc").value);
         let ya_koc = parseFloat(document.getElementById("ya_koc").value);
 
@@ -47,14 +58,17 @@
         let xc_koc = parseFloat(document.getElementById("xc_koc").value);
         let yc_koc = parseFloat(document.getElementById("yc_koc").value);
 
-        let AB = AB_koc(xa_koc, ya_koc, xb_koc, yb_koc);
-        let BC = BC_koc(xb_koc, yb_koc, xc_koc, yc_koc);
-        let AC = AC_koc(xa_koc, ya_koc, xc_koc, yc_koc);
+        // Obliczenia długości boków
+        let AB_koc_wynik = AB_koc(xa_koc, ya_koc, xb_koc, yb_koc);
+        let BC_koc_wynik = BC_koc(xb_koc, yb_koc, xc_koc, yc_koc);
+        let AC_koc_wynik = AC_koc(xa_koc, ya_koc, xc_koc, yc_koc);
 
-        document.getElementById("wyniki").innerHTML =
-            "AB = " + AB.toFixed(3) + "<br>" +
-            "BC = " + BC.toFixed(3) + "<br>" +
-            "AC = " + AC.toFixed(3);
+        // Wyświetlanie wyników
+        document.getElementById("wyniki_koc").innerHTML =
+            "<b>Długości boków trójkąta:</b><br>" +
+            "AB = " + AB_koc_wynik.toFixed(3) + "<br>" +
+            "BC = " + BC_koc_wynik.toFixed(3) + "<br>" +
+            "AC = " + AC_koc_wynik.toFixed(3);
     }
 </script>
 
