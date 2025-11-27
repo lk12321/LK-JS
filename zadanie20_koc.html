@@ -4,51 +4,40 @@
 <body>
 <form>
     <b>Punkt A:</b><br>
-    xA: <input type="number" id="xa_koc">
-    yA: <input type="number" id="ya_koc"><br><br>
+    xa: <input type="number" id="xa_koc">
+    ya: <input type="number" id="ya_koc"><br><br>
 
     <b>Punkt B:</b><br>
-    xB: <input type="number" id="xb_koc">
-    yB: <input type="number" id="yb_koc"><br><br>
+    xb: <input type="number" id="xb_koc">
+    yb: <input type="number" id="yb_koc"><br><br>
 
     <b>Punkt C:</b><br>
-    xC: <input type="number" id="xc_koc">
-    yC: <input type="number" id="yc_koc"><br><br>
+    xc: <input type="number" id="xc_koc">
+    yc: <input type="number" id="yc_koc"><br><br>
 
     <button type="button" onclick="oblicz_koc()">Oblicz boki trójkąta</button>
 </form>
-
-<h3>Wyniki obliczeń:</h3>
 <div id="wyniki_koc"></div>
-
 <script>
-
-    // |AB| = sqrt((xa_koc - xb_koc)^2 + (ya_koc - yb_koc)^2)
     function AB_koc(xa_koc, ya_koc, xb_koc, yb_koc) {
         return Math.sqrt(
             Math.pow(xa_koc - xb_koc, 2) +
             Math.pow(ya_koc - yb_koc, 2)
         );
     }
-
-    // |BC| = sqrt((xb_koc - xc_koc)^2 + (yb_koc - yc_koc)^2)
     function BC_koc(xb_koc, yb_koc, xc_koc, yc_koc) {
         return Math.sqrt(
             Math.pow(xb_koc - xc_koc, 2) +
             Math.pow(yb_koc - yc_koc, 2)
         );
     }
-
-    // |AC| = sqrt((xa_koc - xc_koc)^2 + (ya_koc - yc_koc)^2)
     function AC_koc(xa_koc, ya_koc, xc_koc, yc_koc) {
         return Math.sqrt(
             Math.pow(xa_koc - xc_koc, 2) +
             Math.pow(ya_koc - yc_koc, 2)
         );
     }
-
     function oblicz_koc() {
-        // Pobieranie wartości z formularza
         let xa_koc = parseFloat(document.getElementById("xa_koc").value);
         let ya_koc = parseFloat(document.getElementById("ya_koc").value);
 
@@ -58,19 +47,16 @@
         let xc_koc = parseFloat(document.getElementById("xc_koc").value);
         let yc_koc = parseFloat(document.getElementById("yc_koc").value);
 
-        // Obliczenia długości boków
         let AB_koc_wynik = AB_koc(xa_koc, ya_koc, xb_koc, yb_koc);
         let BC_koc_wynik = BC_koc(xb_koc, yb_koc, xc_koc, yc_koc);
         let AC_koc_wynik = AC_koc(xa_koc, ya_koc, xc_koc, yc_koc);
 
-        // Wyświetlanie wyników
         document.getElementById("wyniki_koc").innerHTML =
             "<b>Długości boków trójkąta:</b><br>" +
-            "AB = " + AB_koc_wynik.toFixed(3) + "<br>" +
-            "BC = " + BC_koc_wynik.toFixed(3) + "<br>" +
-            "AC = " + AC_koc_wynik.toFixed(3);
+            "AB = " + AB_koc_wynik.toFixed(2) + "<br>" +
+            "BC = " + BC_koc_wynik.toFixed(2) + "<br>" +
+            "AC = " + AC_koc_wynik.toFixed(2);
     }
 </script>
-
 </body>
 </html>
