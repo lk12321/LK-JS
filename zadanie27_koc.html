@@ -1,36 +1,41 @@
 <html>
 <meta charset="UTF-8">
+<body style="font-family: Times New Roman; background:#ffd6e8;">
+
+<h2>Obliczenia lotu samolotu – Koc</h2>
+
+<form>
+
+    Odległość Artur–Dawid (odl_koc): 
+    <input type="number" name="odl" step="0.01"><br><br>
+
+    Droga samolotu do chwili bycia nad Dawidem (s_koc):
+    <input type="number" name="s" step="0.01"><br><br>
+
+    <input type="button" value="Oblicz" onclick="start(this.form)"><br><br>
+
+    Wysokość samolotu h_koc:
+    <input type="text" name="h_wynik" readonly><br><br>
+    Kąt startu samolotu (alfa_koc) w stopniach:
+    <input type="text" name="kat_wynik" readonly><br><br>
+</form>
+
 <script>
-function obliczWysokosc(s, odl) {
-    return Math.sqrt(s*s - odl*odl);
+
+function h_koc_funkcja(s, odl) {
+    h_koc = Math.sqrt((s*s) - (odl*odl));
 }
-function obliczKat(s, h) {
-    return Math.asin(h / s) * (180 / Math.PI);
+function alfa_koc_funkcja(h, s) {
+    alfa_koc = Math.asin(h / s) * (180 / Math.PI);
 }
-function oblicz() {
-    let odl_koc = parseFloat(document.getElementById("odl_koc").value);
-    let s_koc   = parseFloat(document.getElementById("s_koc").value);
-    if (s_koc <= odl_koc) {
-        alert("Błąd: s_koc musi być większe niż odl_koc!");
-        return;
-    }
-    let h_koc = obliczWysokosc(s_koc, odl_koc);
-    let kat_koc = obliczKat(s_koc, h_koc);
-    document.getElementById("h_koc").value = h_koc.toFixed(2) + " m";
-    document.getElementById("kat_koc").value = kat_koc.toFixed(2) + "°";
+function start(f) {
+    let odl = parseFloat(f.odl.value);
+    let s   = parseFloat(f.s.value);
+    h_koc_funkcja(s, odl);
+    alfa_koc_funkcja(h_koc, s);
+    f.h_wynik.value   = h_koc.toFixed(2);
+    f.kat_wynik.value = alfa_koc.toFixed(2);
 }
 </script>
-<body>
-<form>
-    <label>Odległość między Arturem a Dawidem (odl_koc):</label><br>
-    <input type="number" id="odl_koc" step="0.01" required><br><br>
-    <label>Długość drogi lotu do punktu nad Dawidem (s_koc):</label><br>
-    <input type="number" id="s_koc" step="0.01" required><br><br>
-    <button type="button" onclick="oblicz()">Oblicz</button><br><br>
-    <label>Wysokość lotu (h_koc):</label><br>
-    <input type="text" id="h_koc" readonly><br><br>
-    <label>Kąt startu samolotu (kat_koc):</label><br>
-    <input type="text" id="kat_koc" readonly><br><br>
-</form>
 </body>
 </html>
