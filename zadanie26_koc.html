@@ -5,24 +5,21 @@
     Górna podstawa: <input type="number" name="a" step="0.01"><br>
     Dolna podstawa: <input type="number" name="b" step="0.01"><br>
     Wysokość: <input type="number" name="h" step="0.01"><br><br>
-    <input type="button" value="Oblicz" onclick="oblicz(this.form)">
+    <input type="button" value="Oblicz" onclick="wynik()">
 </form>
 <script>
 function Pow_kociszewska(a, b, h) {
-    return ((a + b) / 2) * h;}
+    pole_koc = ((a + b) / 2) * h;
+}
 function Obw_kociszewska(a, b, h) {
     let roznica = Math.abs(b - a) / 2;
     let ramie = Math.sqrt(h*h + roznica*roznica);
-    return a + b + 2 * ramie;}
-function oblicz(f) {
-    let a = parseFloat(f.a.value);
-    let b = parseFloat(f.b.value);
-    let h = parseFloat(f.h.value);
-    let pole = Pow_kociszewska(a, b, h).toFixed(2);
-    let obw = Obw_kociszewska(a, b, h).toFixed(2);
-
-  document.write("Pole trapezu= " + pole + "<br>" +
-                 "Obwód trapezu= " + obw + "<br><br>");}
+    obw_koc = a + b + 2 * ramie;
+}   
+function wynik() {
+  document.write("Pole trapezu= " + pole_koc.toFixed(2) + "<br>" +
+                 "Obwód trapezu= " + obw_koc.toFixed(2) + "<br><br>");
+}
    function okno_zamknij()
              {
 window.close() 
