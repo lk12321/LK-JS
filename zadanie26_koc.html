@@ -5,7 +5,9 @@
     Górna podstawa: <input type="number" name="a" step="0.01"><br>
     Dolna podstawa: <input type="number" name="b" step="0.01"><br>
     Wysokość: <input type="number" name="h" step="0.01"><br><br>
-    <input type="button" value="Oblicz" onclick="wynik()">
+    <input type="button" value="Oblicz" onclick="wynik(this.form)"><br><br>
+    Pole: <input type="text" name="wynik_pole" readonly><br>
+    Obwód: <input type="text" name="wynik_obwod" readonly><br><br>
 </form>
 <script>
 function Pow_kociszewska(a, b, h) {
@@ -16,12 +18,16 @@ function Obw_kociszewska(a, b, h) {
     let ramie = Math.sqrt(h*h + roznica*roznica);
     obw_koc = a + b + 2 * ramie;
 }   
-function wynik() {
-  document.write("Pole trapezu= " + pole_koc.toFixed(2) + "<br>" +
-                 "Obwód trapezu= " + obw_koc.toFixed(2) + "<br><br>");
+function wynik(f) {
+    let a = parseFloat(f.a.value);
+    let b = parseFloat(f.b.value);
+    let h = parseFloat(f.h.value);
+    Pow_kociszewska(a, b, h);
+    Obw_kociszewska(a, b, h);
+    f.wynik_pole.value  = pole_koc.toFixed(2);
+    f.wynik_obwod.value = obw_koc.toFixed(2);
 }
-   function okno_zamknij()
-             {
+   function okno_zamknij() {
 window.close() 
              }
 </script>
