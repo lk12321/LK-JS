@@ -10,31 +10,36 @@ window.close()
             <textarea name="kociszewska" cols="80" rows="40" readonly> 
 <html>
 <meta charset="UTF-8">
+<style>
+  body {
+    background: #ffb3d5;
+    font-family: Arial;
+    font-size: 18px;
+    color: blue;
+    padding: 10px;
+  }
+</style>
 <body bgcolor=#ffb3d5>
-<div id="wynik"style="font-size:18px;color:blue;background:#ddd;width:330px;padding:10px;white-space:pre;"></div>
-<script>
-let x1_koc = parseFloat(prompt("Podaj x1:"));
-let x2_koc = parseFloat(prompt("Podaj x2:"));
-let tekst_koc = "";
-let x1_koc_rad = (x1_koc * Math.PI) / 180;
-let liczbaLiter_koc = 4;
-let potega_koc = liczbaLiter_koc / (liczbaLiter_koc + 2);
-let y1_koc = 3 * Math.pow(x1_koc, potega_koc);
-let y2_koc = 2 * Math.cos(x1_koc_rad) + 3 * Math.sin(x1_koc_rad);
-let y3_koc = Math.cbrt(Math.pow(x1_koc, 5) + 2 * Math.pow(x2_koc, 4) * Math.abs(x1_koc - x2_koc));
-    
-tekst_koc += "x1 = " + x1_koc + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "x2 = " + x2_koc + "<br>";
-tekst_koc += "x1 = " + x1_koc + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "x1 = " + x1_koc_rad.toFixed(2) + "<br>";
-tekst_koc += "y1 = " + y1_koc.toFixed(2) + "<br>";
-tekst_koc += "y2 = " + y2_koc.toFixed(2) + "<br>";
-tekst_koc += "y3 = " + y3_koc.toFixed(2) + "<br>";
-document.getElementById("wynik").innerHTML = tekst_koc;
-     function okno_zamknij() 
- {
- window.close()
- }
+    <script>
+    let x1_koc = parseFloat(prompt("Podaj x1:"));
+    let x2_koc = parseFloat(prompt("Podaj x2:"));
+    let x1_koc_rad = (x1_koc * Math.PI) / 180;
+    let potega_koc = 4 / (4 + 2);
+    let y1_koc = 3 * Math.pow(x1_koc, potega_koc);
+    let y2_koc = 2 * Math.cos(x1_koc_rad) + 3 * Math.sin(x1_koc_rad);
+    let y3_koc = Math.cbrt(Math.pow(x1_koc, 5) + 2 * Math.pow(x2_koc, 4)) * Math.abs(x1_koc - x2_koc);
+
+document.write("x1 = " + x1_koc + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "x2 = " + x2_koc + "<br>" +
+  "x1 = " + x1_koc + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "x1(rad) = " + x1_koc_rad.toFixed(2) + "<br>" +
+  "y1 = " + y1_koc.toFixed(2) + "<br>" +
+  "y2 = " + y2_koc.toFixed(2) + "<br>" +
+  "y3 = " + y3_koc.toFixed(2) + "<br>");
+      function okno_zamknij() 
+      { 
+        window.close() 
+      }
 </script>
-    <br><br> <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+    <br><br><input type="button" value="zamknij okno" onclick="window.close()">
 </body>
 </html>
             </textarea> 
