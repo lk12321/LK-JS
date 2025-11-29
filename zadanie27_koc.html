@@ -1,0 +1,28 @@
+<html>
+<meta charset="UTF-8">
+<body style="font-family: Times New Roman; background:#ffd6e8;">
+<form>
+    Odległość: <input type="number" name="odl" step="0.01"><br><br>
+    Droga: <input type="number" name="s" step="0.01"><br><br>
+    <input type="button" value="Oblicz" onclick="start(this.form)"><br><br>
+    Wysokość startu: <input type="text" name="h_wynik" readonly><br><br>
+    Kąt startu: <input type="text" name="kat_wynik" readonly><br><br>
+</form>
+<script>
+function h_koc_funkcja(s, odl) {
+    h_koc = Math.sqrt((s*s) - (odl*odl));
+}
+function alfa_koc_funkcja(h, s) {
+    alfa_koc = Math.asin(h / s) * (180 / Math.PI);
+}
+function start(f) {
+    let odl = parseFloat(f.odl.value);
+    let s   = parseFloat(f.s.value);
+    h_koc_funkcja(s, odl);
+    alfa_koc_funkcja(h_koc, s);
+    f.h_wynik.value   = h_koc.toFixed(2);
+    f.kat_wynik.value = alfa_koc.toFixed(2);
+}
+</script>
+</body>
+</html>
