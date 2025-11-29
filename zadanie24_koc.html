@@ -9,7 +9,7 @@
     padding: 10px;
   }
 </style>
-<body>
+<body bgcolor=#ffb3d5>
     <script>
     let x1_koc = parseFloat(prompt("Podaj x1:"));
     let x2_koc = parseFloat(prompt("Podaj x2:"));
@@ -24,6 +24,10 @@ document.write("x1 = " + x1_koc + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "x2 = " + x
   "y1 = " + y1_koc.toFixed(2) + "<br>" +
   "y2 = " + y2_koc.toFixed(2) + "<br>" +
   "y3 = " + y3_koc.toFixed(2) + "<br>");
+      function okno_zamknij() 
+      { 
+        window.close() 
+      }
 </script>
     <br><br><input type="button" value="zamknij okno" onclick="window.close()">
 </body>
