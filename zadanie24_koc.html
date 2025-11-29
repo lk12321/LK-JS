@@ -14,8 +14,8 @@
     let x1_koc = parseFloat(prompt("Podaj x1:"));
     let x2_koc = parseFloat(prompt("Podaj x2:"));
     let x1_koc_rad = (x1_koc * Math.PI) / 180;
-    let potega_koc = (4 / (4 + 2));
-    let y1_koc = 3 * (Math.pow(x1_koc, potega_koc));
+    let potega_koc = 4 / (4 + 2);
+    let y1_koc = 3 * Math.pow(x1_koc, potega_koc);
     let y2_koc = 2 * Math.cos(x1_koc_rad) + 3 * Math.sin(x1_koc_rad);
     let y3_koc = Math.cbrt(Math.pow(x1_koc, 5) + 2 * Math.pow(x2_koc, 4)) * Math.abs(x1_koc - x2_koc);
 
