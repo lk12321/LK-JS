@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <style>
     body {
-      font-family: Arial;
+      font-family: "Times New Roman";
       padding: 20px;
       font-size: 26px;
       color: darkblue;
@@ -16,16 +16,16 @@
     var lambda = Math.log(2) / T12;
     var N = N0 * Math.exp(-lambda * t);
 document.write(
-      "N0 = " + N0.toFixed(2) + " [sztuk]<br>" +
-      "t = " + t.toFixed(2) + " [lat]<br>" +
-      "T1/2 = " + T12.toFixed(2) + " [lat]<br><br>" +
-      "Lambda = " + lambda.toFixed(7) + " [1/rok]<br>" +
-      "N = " + N.toFixed(7) + " [sztuk]");
+      "N0= " + N0.toFixed(2) + " [sztuk]<br>" +
+      "t= " + t.toFixed(2) + " [lat]<br>" +
+      "T1/2= " + T12.toFixed(2) + " [lat]<br>" +
+      "Lambda= " + lambda.toFixed(7) + " [1/rok]<br>" +
+      "N= " + N.toFixed(7) + " [sztuk]");
      function okno_zamknij() 
  {
  window.close()
  }
   </script>
-     <br><br> <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+     <br> <input type="button" value="zamknij okno" onclick="okno_zamknij()">
 </body>
 </html>
