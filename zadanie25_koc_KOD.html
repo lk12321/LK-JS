@@ -1,0 +1,46 @@
+<html>
+    <script type="text/javascript">
+         function okno_zamknij()
+             {
+window.close() 
+             }
+    </script>
+    <body bgcolor=#ffb3d5>
+        <form>
+            <textarea name="kociszewska" cols="80" rows="40" readonly> 
+<html>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: "Times New Roman";
+      padding: 20px;
+      font-size: 26px;
+      color: darkblue;
+    }
+  </style>
+<body bgcolor=#ffb3d5>
+  <script>
+    var N0 = parseFloat(prompt("Podaj N0:"));
+    var t  = parseFloat(prompt("Podaj t:"));
+    var T12= parseFloat(prompt("Podaj T1/2:"));
+    var lambda = Math.log(2) / T12;
+    var N = N0 * Math.exp(-lambda * t);
+document.write(
+      "N0= " + N0.toFixed(2) + " [sztuk]<br>" +
+      "t= " + t.toFixed(2) + " [lat]<br>" +
+      "T1/2= " + T12.toFixed(2) + " [lat]<br>" +
+      "Lambda= " + lambda.toFixed(7) + " [1/rok]<br>" +
+      "N= " + N.toFixed(7) + " [sztuk]");
+     function okno_zamknij() 
+ {
+ window.close()
+ }
+  </script>
+     <br> <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
+            </textarea> 
+        </form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+    </body> 
+</html>
