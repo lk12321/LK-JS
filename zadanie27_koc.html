@@ -2,23 +2,13 @@
 <meta charset="UTF-8">
 <body bgcolor=#ffb3d5>
 <form>
-
-    Odległość Artur–Dawid (odl_koc): 
-    <input type="number" name="odl" step="0.01"><br><br>
-
-    Droga samolotu do chwili bycia nad Dawidem (s_koc):
-    <input type="number" name="s" step="0.01"><br><br>
-
+    Odległość Artur–Dawid: <input type="number" name="odl" step="0.01"><br>
+    Droga samolotu: <input type="number" name="s" step="0.01"><br><br>
     <input type="button" value="Oblicz" onclick="start(this.form)"><br><br>
-
-    Wysokość samolotu h_koc:
-    <input type="text" name="h_wynik" readonly><br><br>
-    Kąt startu samolotu (alfa_koc) w stopniach:
-    <input type="text" name="kat_wynik" readonly><br><br>
+    Wysokość: <input type="text" name="h_wynik" readonly><br>
+    Kąt startu: <input type="text" name="kat_wynik" readonly><br><br>
 </form>
-
 <script>
-
 function h_koc_funkcja(s, odl) {
     h_koc = Math.sqrt((s*s) - (odl*odl));
 }
