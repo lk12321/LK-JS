@@ -8,7 +8,38 @@ window.close()
     <body bgcolor=#ffb3d5>
         <form>
             <textarea name="kociszewska" cols="80" rows="40" readonly> 
-
+<html>
+<meta charset="UTF-8">
+<body bgcolor=#ffb3d5>
+<form>
+    Odległość Artur–Dawid: <input type="number" name="odl" step="0.01"><br>
+    Droga samolotu: <input type="number" name="s" step="0.01"><br><br>
+    <input type="button" value="Oblicz" onclick="start(this.form)"><br><br>
+    Wysokość: <input type="text" name="h_wynik" readonly><br>
+    Kąt startu: <input type="text" name="kat_wynik" readonly><br><br>
+</form>
+<script>
+function h_koc_funkcja(s, odl) {
+    h_koc = Math.sqrt((s*s) - (odl*odl));
+}
+function alfa_koc_funkcja(h, s) {
+    alfa_koc = Math.asin(h / s) * (180 / Math.PI);
+}
+function start(f) {
+    let odl = parseFloat(f.odl.value);
+    let s   = parseFloat(f.s.value);
+    h_koc_funkcja(s, odl);
+    alfa_koc_funkcja(h_koc, s);
+    f.h_wynik.value   = h_koc.toFixed(2);
+    f.kat_wynik.value = alfa_koc.toFixed(2);
+}
+function okno_zamknij() {
+window.close() 
+             }
+</script>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>
             </textarea> 
         </form>
 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
