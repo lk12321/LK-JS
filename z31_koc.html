@@ -15,9 +15,13 @@
   router.iloscportow=5; 
   router.router_wypisz_kociszewska=function() {alert('Ilość portów: ' + this.iloscportow)} 
   router.router_wypisz_kociszewska(); 
+            function okno_zamknij()
+             {
+window.close() 
+             }
             </script> 
      </head> 
-<body> 
+<body bgcolor=#ffb3d5> 
  <br> 
    Programowanie obiektowe. <br> 
      Obiekt  to  router<br> 
@@ -27,6 +31,7 @@
      standard WPA<br> 
      metoda:  router_pokaz_kociszewska<br> 
      nowe pole to ilość portów <br> 
-     nowa metoda to router_wypisz_kociszewska();<br> 
+     nowa metoda to router_wypisz_kociszewska();<br><br>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
 </body> 
 </html> 
