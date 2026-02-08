@@ -7,7 +7,7 @@
  }
    </script>
 <body bgcolor=#ffb3d5>
-<h3>1. W jaki sposób można określić właściwość danego obiektu (dwa sposoby wraz z przykładami)? </h3>
+<h3>1. W jaki sposób można określić właściwość danego obiektu? </h3>
 <b>Właściwość danego obiektu można określić: </b>
   <ul>
 <li><b><u>Sposób 1</u></b><br>
@@ -77,7 +77,7 @@ var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');<br><br>
 <b>Powstały dwa nowe obiekty osoba1 i osoba2 należące do klasy klient.</b>
   
 <h3> 8. Znaczenie słowa kluczowego prototype wraz z przykładem i opisem. </h3>
-  Do definowania metod i właściwości dla obiektu jest wykorzystana właściwości <b>prototype</b>.<br><br>
+  Do definowania metod i właściwości dla obiektu jest wykorzystana właściwość <b>prototype</b>.<br><br>
 <u>Przykład</u><br>
   <pre>
 function klient()
@@ -92,12 +92,12 @@ klient.prototype.pisz_dane = function ()
 klient.prototype.zawod = 'kierowca';
 var osoba1 = new klient();
 osoba1.pisz_dane();
-    </pre><br>
+    </pre>
 <u>Opis do przykładu powyżej:</u><br>
 W definicji konstruktora nie zostały zadeklarowane żadne metody i właściwości. <br>
 Dopiero po użyciu właściwości prototype została dodana metoda pisz_dane oraz właściwość zawod. <br>
-Od tej pory każdy nowo tworzony obiekt na podstawie konstruktora klient będzie posiadał tę dodatkową właściwość i metodę.<br><br>
-<h6>Właściwość prototype może być również wykorzystana do dodawania dodatkowych metod lub właściwości do istniejących obiektów.</h6><br>
+Od tej pory każdy nowo tworzony obiekt na podstawie konstruktora klient będzie posiadał tę dodatkową właściwość i metodę.<br>
+<h4>Właściwość prototype może być również wykorzystana do dodawania dodatkowych metod lub właściwości do istniejących obiektów.</h4><br>
   
    <input type="button" value="zamknij okno" onclick="okno_zamknij()">
 </body>
