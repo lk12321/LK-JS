@@ -7,9 +7,15 @@ standardWiFi: '802.11ac',
 standardWPA: 'WPA2', 
 router_wyswietl_kociszewska: function ()
   {
-     document.write(this.rodzaj + ' ' + this.standardWiFi)
+    document.write("Obiekt: router<br>");
+    document.write("Pola obiektu:<br>");
+    document.write("rodzaj: " + this.rodzaj + "<br>");
+    document.write("standardWiFi: " + this.standardWiFi + "<br>");
+    document.write("standardWPA: " + this.standardWPA + "<br>");
+    document.write("metoda: router_wyswietl_kociszewska<br>");
   }
 }
+   
 router.router_wyswietl_kociszewska();
    function okno_zamknij()
              {
