@@ -7,7 +7,7 @@ window.close()
     </script>
     <body bgcolor=#ffb3d5>
         <form>
-            <textarea name="kociszewska" cols="80" rows="35" readonly> 
+            <textarea name="kociszewska" cols="80" rows="40" readonly> 
 <html> 
   <meta charset="utf-8">
      <head> 
@@ -18,28 +18,33 @@ window.close()
    standardWPA: 'WPA2', 
    router_pokaz_kociszewska: function () 
      { 
-        document.write(this.rodzaj + ' ' + this.standardWiFi) 
+        document.write("Obiekt: router<br>");
+        document.write("Pola:<br>");
+        document.write("rodzaj: " + this.rodzaj + "<br>");
+        document.write("standard Wi-Fi: " + this.standardWiFi + "<br>");
+        document.write("standard WPA: " + this.standardWPA + "<br>");
+        document.write("metoda: router_wyswietl_kociszewska<br>");
      } 
   } 
   router.router_pokaz_kociszewska(); 
   router.iloscportow=5; 
-  router.router_wypisz_kociszewska=function() {alert('Ilość portów: ' + this.iloscportow)} 
+  router.router_wypisz_kociszewska=function() 
+  {
+    alert('Ilość portów: ' + this.iloscportow)
+    document.write("nowe pole to ilość portów<br>");
+    document.write("nowa metoda to router_wypisz_kociszewska();<br><br>");
+  } 
   router.router_wypisz_kociszewska(); 
+            function okno_zamknij()
+             {
+window.close() 
+             }
             </script> 
      </head> 
-<body> 
- <br> 
-   Programowanie obiektowe. <br> 
-     Obiekt  to  router<br> 
-     Pola:<br> 
-     rodzaj<br> 
-     standard Wi-Fi<br> 
-     standard WPA<br> 
-     metoda:  router_pokaz_kociszewska<br> 
-     nowe pole to ilość portów <br> 
-     nowa metoda to router_wypisz_kociszewska();<br> 
+<body bgcolor=#ffb3d5>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
 </body> 
-</html>
+</html> 
             </textarea>
         </form>
 <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
