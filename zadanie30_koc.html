@@ -1,0 +1,31 @@
+<html>
+  <head>
+ <script type="text/javascript">
+ var router = {
+rodzaj: 'bezprzewodowy', 
+standardWiFi: '802.11ac', 
+standardWPA: 'WPA2', 
+router_wyswietl_kociszewska: function ()
+  {
+     document.write(this.rodzaj + ' ' + this.standardWiFi)
+  }
+}
+router.router_wyswietl_kociszewska();
+   function okno_zamknij()
+             {
+window.close() 
+             }
+ </script>
+    </head>
+<body bgcolor=#ffb3d5> 
+  <br>
+Programowanie obiektowe. <br>
+Obiekt to router.<br> 
+Pola:<br> 
+rodzaj<br> 
+standard Wi-Fi<br> 
+standard WPA<br> 
+metoda: router_wyswietl_kociszewska<br><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>
