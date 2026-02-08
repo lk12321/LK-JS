@@ -1,0 +1,104 @@
+<html>
+   <meta charset="utf-8">
+   <script language="JavaScript">
+    function okno_zamknij() 
+ {
+ window.close()
+ }
+   </script>
+<body bgcolor=#ffb3d5>
+<h3>1. W jaki sposób można określić właściwość danego obiektu (dwa sposoby wraz z przykładami)? </h3>
+<b>Właściwość danego obiektu można określić: </b>
+  <ul>
+<li><b><u>Sposób 1</u></b><br>
+Używając zapisu postaci:<br>
+a) <b>nazwa_obiektu.nazwa_właściwości="tekst";</b> ➤ dla właściwości typu tekstowego<br>
+np. auto.marka="Opel Omega";<br>
+b) <b>nazwa_obiektu.nazwa_właściwości=liczba;</b> ➤ dla właściwości typu liczbowego<br>
+np. auto.rok=1996; </li>
+<li><b><u>Sposób 2</u></b><br>
+Używając zapisu postaci:<br>
+<b>nazwa_obiektu[nazwa_właściwości];</b><br>
+np. auto[cena]=25000;</li>
+</ul>
+  
+<h3> 2. W jaki sposób można odwołać się do pól (właściwości) i metod? </h3>
+Do <b>właściwości i metod</b> można się odwołać podobnie jak do zwykłych zmiennych i funkcji.<br>
+Trzeba tylko przed ich nazwą umieścić nazwę obiektu, którego są elementami (np. zmienną, która przechowuje dany obiekt), i <b>kropkę</b>.<br><br>
+np.  console.log(samochod1.kolor); ➤ wyświetla kolor obiektu samochod
+  
+<h3> 3. Wymień cechy charakterystyczne konstruktora. </h3>
+<ul>
+<li> jest wywoływany (uruchamiany) automatycznie w chwili tworzenia obiektu danej klasy - na rzecz tego obiektu,</li>
+<li>nazywa się tak samo jak klasa,</li>
+<li> nie zwraca żadnej wartości,</li>
+<li> może przyjmować argumenty - tak jak zwykła funkcja czy metoda, aby następnie powołać do życia obiekt za pomocą operatora <b>new</b>.</li>
+</ul>
+<h3> 4. Konstruowanie obiektu na podstawie przykładu ➤ obiekt ma trzy pola oraz jedną metodę. </h3>
+<pre>
+var osoba_1 =
+{
+nazwisko : ‘Kowalski’,
+imie :’Jan’,
+zawod :’piekarz’,
+wyświetl :function ()
+    {
+        Document.write(this.nazwisko + ‘ ‘ + this.imie)
+    }
+}
+  </pre>
+<h3> 5. Znaczenie słowa this. Jak oddzielamy pola oraz metody? </h3>
+Słowo kluczowe <b>this</b> ➤ pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu.<br><br>
+Metody i pola <b>oddzielamy przecinkami</b> w obrębie jednego obiektu.
+  
+<h3> 6. Konstruktor w JS na podstawie przykładu wraz z opisem. </h3>
+  
+Zostanie utworzony <u>konstruktor</u> o nazwie <b>klient</b> z <u>właściwościami</u> <b>nazwisko, imie, zawod</b> oraz <u>metodą</u> <b>wypisz()</b>. <br>
+Właściwościom obiektu zostały przypisane wartości parametrów. <br>
+  Użyte słowo kluczowe <b>this</b> odnosi się do aktualnego obiektu i pozwala na przypisanie wartości parametru do odpowiedniego pola tego obiektu.<br><br>
+  <pre>
+function klient(nazwisko_k,imie_k,zawod_k)
+{
+this.nazwisko=nazwisko_k;
+this.imie=imie_k;
+this.zawod=zawod_k;
+    
+wypisz = function ()
+ {
+  alert(this.nazwisko + ' ' + this.imie)
+ }
+}
+</pre>
+<h3> 7. Znaczenie słowa kluczowego New wraz z przykładem. </h3>
+  Do utworzenia <b>nowego obiektu</b> na podstawie konstruktora stosowane jest <b>słowo kluczowe <u>new</u></b>.<br><br>
+<u>Przykład</u><br>
+var osoba1 = new klient('Kowalski', 'Jan', 'kierowca');<br>
+var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');<br><br>
+<b>Powstały dwa nowe obiekty osoba1 i osoba2 należące do klasy klient.</b>
+  
+<h3> 8. Znaczenie słowa kluczowego prototype wraz z przykładem i opisem. </h3>
+  Do definowania metod i właściwości dla obiektu jest wykorzystana właściwości <b>prototype</b>.<br><br>
+<u>Przykład</u><br>
+  <pre>
+function klient()
+{
+this.nazwisko='Bielski';
+this.imie='Paweł';
+}
+klient.prototype.pisz_dane = function ()
+ {
+  document.write(this.nazwisko + '' + this.imie)
+ }
+klient.prototype.zawod = 'kierowca';
+var osoba1 = new klient();
+osoba1.pisz_dane();
+    </pre><br>
+<u>Opis do przykładu powyżej:</u><br>
+W definicji konstruktora nie zostały zadeklarowane żadne metody i właściwości. <br>
+Dopiero po użyciu właściwości prototype została dodana metoda pisz_dane oraz właściwość zawod. <br>
+Od tej pory każdy nowo tworzony obiekt na podstawie konstruktora klient będzie posiadał tę dodatkową właściwość i metodę.<br><br>
+<h6>Właściwość prototype może być również wykorzystana do dodawania dodatkowych metod lub właściwości do istniejących obiektów.</h6><br>
+  
+   <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
