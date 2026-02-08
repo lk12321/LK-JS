@@ -1,122 +1,53 @@
 <html>
-<head>
-<script type="text/javascript">
-
-// ===== KREATOR (KONSTRUKTOR KLASY) =====
-function klient(nazwisko_k, imie_k, zawod_k, wiek_k)
-{
-    this.nazwisko = nazwisko_k;
-    this.imie = imie_k;
-    this.zawod = zawod_k;
-    this.wiek = wiek_k;
-}
-
-// ===== METODA DODANA DO PROTOTYPU (4 POLA) =====
-klient.prototype.wypisz = function()
-{
-    document.write(
-        this.nazwisko + " " +
-        this.imie + " " +
-        this.zawod + " " +
-        this.wiek + " lat<br>"
-    );
-};
-
-// ===== POWOŁANIE 3 OBIEKTÓW =====
-var osoba1 = new klient("Kowalski", "Jan", "kierowca", 45);
-var osoba2 = new klient("Nowak", "Anna", "sekretarka", 32);
-var osoba3 = new klient("Wiśniewski", "Piotr", "informatyk", 28);
-
-// ===== DOSTĘP DO WŁAŚCIWOŚCI OBIEKTÓW =====
-document.write("<b>Dostęp do właściwości obiektów:</b><br>");
-document.write(osoba1.nazwisko + " " + osoba1.imie + " " + osoba1.zawod + " " + osoba1.wiek + "<br>");
-document.write(osoba2.nazwisko + " " + osoba2.imie + " " + osoba2.zawod + " " + osoba2.wiek + "<br>");
-document.write(osoba3.nazwisko + " " + osoba3.imie + " " + osoba3.zawod + " " + osoba3.wiek + "<br><br>");
-
-// ===== UŻYCIE METODY PROTOTYPU =====
-document.write("<b>Użycie metody wypisz():</b><br>");
-osoba1.wypisz();
-osoba2.wypisz();
-osoba3.wypisz();
-
-// ===== DODATKOWA WŁAŚCIWOŚĆ (POZA CIAŁEM OBIEKTU) =====
-klient.prototype.kraj = "Polska";
-
-// ===== DODATKOWA METODA POZA CIAŁEM OBIEKTU =====
-klient.prototype.klient_pokaz_kociszewska = function()
-{
-    document.write(
-        "Kraj zamieszkania: " + this.kraj + "<br><br>"
-    );
-};
-
-// ===== WYWOŁANIE DODATKOWEJ METODY =====
-document.write("<b>Dodatkowa metoda:</b><br>");
-osoba1.klient_pokaz_kociszewska();
-osoba2.klient_pokaz_kociszewska();
-osoba3.klient_pokaz_kociszewska();
-
-</script>
-</head>
-
-<body>
-<br>
-programowanie obiektowe
-</body>
-</html>
-
-
-
-
-<html>
+    <meta charset="utf-8">
 <head>
 <script type="text/javascript">
 
 // ===== KONSTRUKTOR (KLASA) =====
-function router(marka_r, model_r, predkosc_r, cena_r)
+function router(rodzaj_r, standardWiFi_r, standardWPA_r, cena_r)
 {
-    this.marka = marka_r;
-    this.model = model_r;
-    this.predkosc = predkosc_r;
+    this.rodzaj = rodzaj_r;
+    this.standardWiFi = standardWiFi_r;
+    this.standardWPA = standardWPA_r;
     this.cena = cena_r;
 }
 
 // ===== METODA W PROTOTYPIE (4 POLA) =====
-router.prototype.wypisz = function()
+router.prototype.router_kociszewska_wypisz = function()
 {
     document.write(
-        this.marka + " " +
-        this.model + " " +
-        this.predkosc + " " +
-        this.cena + "<br>"
+        "Rodzaj: " + this.rodzaj + "<br>" +
+        "Standard Wi-Fi: " + this.standardWiFi + "<br>" +
+        "Standard WPA: " + this.standardWPA + "<br>" +
+        "Cena: " + this.cena + " zł<br><br>"
     );
 };
 
 // ===== POWOŁANIE 3 OBIEKTÓW =====
-var router1 = new router("TP-Link", "Archer C6", "1200Mb/s", 250);
-var router2 = new router("Asus", "RT-AX55", "1800Mb/s", 450);
-var router3 = new router("Netgear", "R7000", "1900Mb/s", 600);
+var router1 = new router("bezprzewodowy", "802.11ac", "WPA2", 250);
+var router2 = new router("bezprzewodowy", "802.11ax", "WPA3", 400);
+var router3 = new router("przewodowy", "802.11n", "WPA2", 180);
+
+    // ===== DODATKOWA WŁAŚCIWOŚĆ POZA CIAŁEM OBIEKTU =====
+router.prototype.ilosc_portow = 4;
+
+// ===== DODATKOWA METODA POZA CIAŁEM OBIEKTU =====
+router.prototype.router_pokaz_kociszewska = function ()
+{
+    document.write("Ilość portów: " + this.ilosc_portow + "<br><br>");
+};
 
 // ===== DOSTĘP DO WŁAŚCIWOŚCI =====
 document.write("Dostęp do właściwości:<br>");
-document.write(router1.marka + " " + router1.model + " " + router1.predkosc + " " + router1.cena + "<br>");
-document.write(router2.marka + " " + router2.model + " " + router2.predkosc + " " + router2.cena + "<br>");
-document.write(router3.marka + " " + router3.model + " " + router3.predkosc + " " + router3.cena + "<br><br>");
+document.write(router1.rodzaj + " " + router1.standardWiFi + " " + router1.standardWPA + " " + router1.cena + "zł<br>");
+document.write(router2.rodzaj + " " + router2.standardWiFi + " " + router2.standardWPA + " " + router2.cena + "zł<br>");
+document.write(router3.rodzaj + " " + router3.standardWiFi + " " + router3.standardWPA + " " + router3.cena + "zł<br><br>");
 
 // ===== UŻYCIE METODY =====
-document.write("Użycie metody wypisz():<br>");
-router1.wypisz();
-router2.wypisz();
-router3.wypisz();
-
-// ===== DODATKOWA WŁAŚCIWOŚĆ POZA CIAŁEM OBIEKTU =====
-router.prototype.standard = "WiFi 6";
-
-// ===== DODATKOWA METODA POZA CIAŁEM OBIEKTU =====
-router.prototype.router_pokaz_kociszewska = function()
-{
-    document.write(this.standard + "<br>");
-};
+document.write("Użycie metody router_kociszewska_wypisz():<br>");
+router1.router_kociszewska_wypisz();
+router2.router_kociszewska_wypisz();
+router3.router_kociszewska_wypisz();
 
 // ===== WYWOŁANIE METODY =====
 router1.router_pokaz_kociszewska();
@@ -126,8 +57,9 @@ router3.router_pokaz_kociszewska();
 </script>
 </head>
 
-<body>
+<body bgcolor=#ffb3d5>
 <br>
-programowanie obiektowe
+Programowanie obiektowe<br>
+Obiekt: router
 </body>
 </html>
