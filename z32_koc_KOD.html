@@ -27,21 +27,22 @@ router.prototype.router_kociszewska_wypisz = function()
 var router1 = new router("bezprzewodowy", "802.11ac", "WPA2", 250);
 var router2 = new router("bezprzewodowy", "802.11ax", "WPA3", 400);
 var router3 = new router("przewodowy", "802.11n", "WPA2", 180);
-router1.router_kociszewska_wypisz();
-router2.router_kociszewska_wypisz();
-router3.router_kociszewska_wypisz();
     
-router.prototype.ilosc_portow = 4;
-router.prototype.router_pokaz_kociszewska = function ()
+router.ilosc_portow = 4;
+router.router_pokaz_kociszewska = function ()
 {
     alert("Ilość portów we wszystkich routerach: " + this.ilosc_portow);
 };
-    router.router_pokaz_kociszewska();
 
-document.write("Dostęp do właściwości:<br>");
-document.write("router pierwszy:" + router1.rodzaj + " " + router1.standardWiFi + " " + router1.standardWPA + " " + router1.cena + "zł<br>");
-document.write("router drugi:" +router2.rodzaj + " " + router2.standardWiFi + " " + router2.standardWPA + " " + router2.cena + "zł<br>");
-document.write("router trzeci:" +router3.rodzaj + " " + router3.standardWiFi + " " + router3.standardWPA + " " + router3.cena + "zł<br><br>");
+document.write("<u>Dostęp do właściwości:</u><br>");
+document.write("router pierwszy: " + router1.rodzaj + " " + router1.standardWiFi + " " + router1.standardWPA + " " + router1.cena + "zł<br>");
+document.write("router drugi: " +router2.rodzaj + " " + router2.standardWiFi + " " + router2.standardWPA + " " + router2.cena + "zł<br>");
+document.write("router trzeci: " +router3.rodzaj + " " + router3.standardWiFi + " " + router3.standardWPA + " " + router3.cena + "zł<br><br>");
+    
+router1.router_kociszewska_wypisz();
+router2.router_kociszewska_wypisz();
+router3.router_kociszewska_wypisz();
+router.router_pokaz_kociszewska();
   function okno_zamknij()
              {
 window.close() 
