@@ -12,7 +12,7 @@ var x=prompt("podaj argument x=","");
  function f_koc(x_koc) {
  if(x_koc>=9) {return 2;}
  if((x_koc=>-2)&&(x_koc<0)) {return (x_koc+1)*(x_koc+1);}
- if((x_koc=>-2)&&(x_koc<0)) {return (x_koc);}
+ if((x_koc=>0)&&(x_koc<2)) {return (x_koc*x_koc*x_koc)+1;}
  if(x_koc<-2) {return 1;}
  }
  document.write("f("+x_koc+")="+f_koc(x_koc)+"<br><br>");
