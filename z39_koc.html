@@ -1,0 +1,24 @@
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Kociszewska Z39_JS</title>
+</head>
+<body bgcolor=#ffb3d5>
+<input type="button" name="kociszewska" value="Oblicz" onclick="fun_koc()"/>
+<script>
+   function okno_zamknij() 
+ {
+ window.close()
+ }
+function fun_koc() {
+    var x_koc = prompt("Podaj kolor","");
+    if(x_koc == 1 || x_koc.toLowerCase() == "czerwony") {
+        document.write('<h1 style="color:red; font-size: 48px;">wczytałeś kolor czerwony</h1><br />'); } 
+    else if(x_koc == 2 || x_koc.toLowerCase() == "niebieski") {
+        document.write('<h6 style="color:blue; font-size: 16px;">wczytałeś kolor niebieski</h6><br />'); } 
+}
+</script>
+    <br><input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
+<!-- Kociszewska Z39_JS -->
