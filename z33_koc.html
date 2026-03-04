@@ -1,0 +1,158 @@
+<html>
+<meta charset="utf-8">
+<head>
+<script type="text/javascript">
+
+// =====================
+// 1. KONSTRUKTOR USER
+// =====================
+function User(email_u, password_u, avatar_u)
+{
+    this.email = email_u;
+    this.password = password_u;
+    this.avatar = avatar_u;
+}
+
+// =====================
+// 2. OBIEKT userList
+// =====================
+var userList = {
+    users: [],
+
+    addUser: function(user)
+    {
+        this.users.push(user);
+    },
+
+    login: function(email, password)
+    {
+        for(var i = 0; i < this.users.length; i++)
+        {
+            if(this.users[i].email == email && this.users[i].password == password)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+};
+
+// Dodanie przykładowych użytkowników
+var user1 = new User("ania@test.pl", "1234", "https://i.pravatar.cc/80?img=1");
+var user2 = new User("ola@test.pl", "abcd", "https://i.pravatar.cc/80?img=2");
+
+userList.addUser(user1);
+userList.addUser(user2);
+
+// =====================
+// 3. FUNKCJA LOGOWANIA
+// =====================
+function sprawdz_logowanie()
+{
+    var email = document.getElementById("login").value;
+    var haslo = document.getElementById("haslo").value;
+
+    var wynik = userList.login(email, haslo);
+
+    if(wynik)
+    {
+        document.getElementById("wynik").innerHTML = "✅ Zalogowano poprawnie!";
+    }
+    else
+    {
+        document.getElementById("wynik").innerHTML = "❌ Błędny login lub hasło!";
+    }
+}
+
+
+// =====================
+// ZADANIE ROZSZERZONE
+// 1. KONSTRUKTOR UserView
+// =====================
+function UserView(user_instance)
+{
+    this.user = user_instance;
+
+    this.dom = document.createElement("li");
+    this.dom.style.listStyle = "none";
+    this.dom.style.margin = "10px";
+    this.dom.style.padding = "10px";
+    this.dom.style.border = "2px solid pink";
+    this.dom.style.borderRadius = "10px";
+    this.dom.style.width = "250px";
+
+    this.refresh();
+}
+
+// =====================
+// METODA REFRESH
+// =====================
+UserView.prototype.refresh = function()
+{
+    this.dom.innerHTML = "";
+
+    var img = document.createElement("img");
+    img.src = this.user.avatar;
+    img.style.width = "80px";
+    img.style.borderRadius = "50%";
+    img.style.display = "block";
+
+    var link = document.createElement("a");
+    link.href = "mailto:" + this.user.email;
+    link.innerHTML = this.user.email;
+    link.style.display = "block";
+    link.style.marginTop = "10px";
+    link.style.color = "purple";
+    link.style.fontWeight = "bold";
+
+    this.dom.appendChild(img);
+    this.dom.appendChild(link);
+};
+
+
+// =====================
+// WYŚWIETLENIE LISTY
+// =====================
+window.onload = function()
+{
+    var lista = document.getElementById("lista_userow");
+
+    for(var i = 0; i < userList.users.length; i++)
+    {
+        var view = new UserView(userList.users[i]);
+        lista.appendChild(view.dom);
+    }
+};
+
+function okno_zamknij()
+{
+    window.close();
+}
+
+</script>
+</head>
+
+<body bgcolor="#ffb3d5">
+
+<h2>Logowanie</h2>
+
+Login (email):<br>
+<input type="text" id="login"><br><br>
+
+Hasło:<br>
+<input type="password" id="haslo"><br><br>
+
+<input type="button" value="Zaloguj" onclick="sprawdz_logowanie()">
+
+<p id="wynik"></p>
+
+<hr>
+
+<h2>Lista użytkowników</h2>
+<ul id="lista_userow"></ul>
+
+<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+
+</body>
+</html>
