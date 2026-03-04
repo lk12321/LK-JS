@@ -20,7 +20,8 @@ h1 { text-transform: uppercase; }
 <input type="button" value="DZIELENIE" onclick="iloraz_koc()">
 <input type="button" value="TEORIA-Kociszewska" onclick="teoria_koc()">
 <div id="wynik.toFixed(2)" style="margin-top:20px;"></div>
-<div id="teoria_koc" style="margin-top:20px;">
+   
+<div id="teoria" style="margin-top:20px;">
 <font color=green size=4>Pierwsza linia kodu:</font><br>
 <font color=red size=4>&lt;label for=&quot;a&quot;&gt;Podaj pierwszą liczbę:&lt;/label&gt; &lt;input type=&quot;number&quot; id=&quot;a&quot;&gt;</font><br>
 <font color=green size=4>Wytłumaczenie:</font><br>
@@ -46,6 +47,7 @@ h1 { text-transform: uppercase; }
 <font color=green size=4>Wytłumaczenie:</font><br>
 <font color=red size=4>pobranie wartości Id o nazwie &quot;wynik&quot; i wyprowadzenie w oknie przeglądarki tekstu &quot;Wynik działania wynosi: &quot; oraz wartości zmiennej suma;</font><br><br>
 </div>
+   
 <script>
 function suma_koc()
 {
@@ -118,7 +120,7 @@ document.getElementById("wynik.toFixed(2)").innerHTML = "Wynik działania wynosi
 }
    function teoria_koc()
    {
-    document.getElementById("teoria_koc").style.display = "block";
+    document.getElementById("teoria").style.display = "block";
 }
    function okno_zamknij()
              { 
