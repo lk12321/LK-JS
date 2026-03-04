@@ -1,0 +1,67 @@
+<html>
+   <meta charset="utf-8">
+   <script language="JavaScript">
+    function okno_zamknij() 
+ {
+ window.close()
+ }
+   </script>
+<body bgcolor=#ffb3d5>
+<h3>1) Instrukcja wyboru ➤ składania teoretyczna.</h3>
+  
+  <pre>
+if (warunek_logiczny1)
+ {
+    // instrukcje jeśli warunek_logiczny1 prawdziwy
+ }
+if (warunek_logiczny2)
+ {
+    // instrukcje jeśli warunek_logiczny2 prawdziwy
+ }
+  </pre>
+  
+<h3>2) Instrukcja wyboru ➤ schemat blokowy.</h3>
+<img src="inwyboru.png">
+  
+<h3>3) Instrukcja alternatywy ➤ składania teoretyczna.</h3>
+ <pre>
+if (warunek_logiczny)
+ {
+   // instrukcje jeśli warunek_logiczny prawdziwy
+ }
+else
+ {
+   // instrukcje jeśli warunek_logiczny fałszywy
+ }
+  </pre>
+  
+<h3>4) Instrukcja alternatywy ➤ schemat blokowy.</h3>
+<img src="inalternatywy.png">
+  
+<h3>5) Operatory porównania.</h3>
+   <pre>
+Operator        Opis                   Przykład
+==              jest równe             2==3   wynik➤fałsz
+!=              nie jest równe         2!=3   wynik➤prawda
+>               jest większe           25>3   wynik➤prawda
+&lt;               jest mniejsze          2&lt;3  wynik➤prawda
+>=              większe lub równe      25>=3  wynik➤prawda
+&lt;=              mniejsze lub równe     2&lt;=3  wynik➤prawda
+</pre>
+  
+<h3>6) Uwaga do operatorów porównania.</h3>
+  
+Należy odróżnić == ( dwa razy ) od = (jeden raz)<br>
+== ( dwa razy ) ➤ instrukcja PORÓWNANIA<br>
+=  (jeden raz)  ➤ instrukcja PRZYPISANIA, np. a=5;
+  
+<h3>7) Operatory logiczne.</h3>
+   <pre>
+Operator    Opis          Przykład
+&&          i             x=3 y=4 (x < 9 && y > 2)   wynik➤prawda
+||          lub           x=3 y=4 (x==8 || y==6)     wynik➤fałsz
+!        zaprzeczenie     x=3 y=4 !(x==y)            wynik➤prawda
+   </pre>
+   <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
