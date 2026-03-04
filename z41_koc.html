@@ -92,17 +92,29 @@ document.getElementById("wynik.toFixed(2)").innerHTML = "Wynik działania wynosi
 }
    function teoria_koc() 
    {
-document.write("<font color=green size=4>pierwsza linia teorii</font>"+"<br>");
-document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>labelfor=</font>"+"<font color=red size=4>&quot;</font>");
-document.write("<font color=red size=4>a</font>"+"<font color=red size=4>&quot;</font>"+"<fontcolor=red size=4>&gt;</font>");
-document.write("<font color=red size=4>Podaj pierwszą liczbę:</font>");
-document.write("<font color=red size=4>&lt;</font>"+"<font color=redsize=4>/label</font>"+"<font color=red size=4>&gt;</font>");
-document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>inputtype=</font>"+"<font color=red size=4>&quot;</font>");
-document.write("<font color=red size=4>number</font>"+"<font color=redsize=4>&quot;</font>");
-document.write("<font color=red size=4> id=</font>"+"<font color=red size=4>&quot;</font>");
-document.write("<font color=red size=4>a</font>"+"<font color=red size=4>&quot;</font>"+"<fontcolor=red size=4>&gt;</font>"+"<br>");
-document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>");
-document.write("<font color=red size=4>wykonanie numerycznego pola formularza z opisem 'Podaj pierwszą liczbę:' a nazwa pola to 'a' </font>"+"<br>");
+document.write("<font color=green size=4>Pierwsza linia kodu:</font><br>");
+document.write("<font color=red size=4>&lt;label for=&quot;a&quot;&gt;Podaj pierwszą liczbę:&lt;/label&gt; &lt;input type=&quot;number&quot; id=&quot;a&quot;&gt;</font><br>");
+document.write("<font color=green size=4>Tworzy etykietę (label) oraz pole liczbowe (input). Etykieta jest połączona z polem przez for i id='a'.</font><br><br>");
+
+// 2 LINIA
+document.write("<font color=green size=4>Druga linia kodu:</font><br>");
+document.write("<font color=red size=4>&lt;input type=&quot;button&quot; value=&quot;DODAWANIE&quot; onclick=&quot;suma()&quot;&gt;</font><br>");
+document.write("<font color=green size=4>Tworzy przycisk DODAWANIE, który po kliknięciu uruchamia funkcję suma().</font><br><br>");
+
+// 3 LINIA
+document.write("<font color=green size=4>Trzecia linia kodu:</font><br>");
+document.write("<font color=red size=4>var a = document.getElementById(&quot;a&quot;).value;</font><br>");
+document.write("<font color=green size=4>Pobiera wartość z pola o id='a' i zapisuje ją do zmiennej a.</font><br><br>");
+
+// 4 LINIA
+document.write("<font color=green size=4>Czwarta linia kodu:</font><br>");
+document.write("<font color=red size=4>if (a == &quot;&quot; || b == &quot;&quot;)</font><br>");
+document.write("<font color=green size=4>Sprawdza czy pole a lub b jest puste.</font><br><br>");
+
+// 5 LINIA
+document.write("<font color=green size=4>Piąta linia kodu:</font><br>");
+document.write("<font color=red size=4>document.getElementById(&quot;wynik&quot;).innerHTML = &quot;Wynik działania wynosi: &quot; + suma;</font><br>");
+document.write("<font color=green size=4>Wyświetla w elemencie o id='wynik' tekst oraz wartość zmiennej suma.</font><br><br>");
 }
    function okno_zamknij()
              { 
