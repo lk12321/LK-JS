@@ -1,0 +1,128 @@
+<html>
+    <script type="text/javascript">
+         function okno_zamknij()
+             {
+window.close() 
+             }
+    </script>
+    <body bgcolor=#ffb3d5>
+        <form>
+            <textarea name="kociszewska" cols="80" rows="140" readonly> 
+<html lang="pl">
+<head>
+<title>Zadanie JavaScript Lena Kociszewska 3F</title>
+<meta charset="utf-8">
+<style>
+h1 { text-transform: uppercase; }
+</style>
+</head>
+<body bgcolor=#ffb3d5>
+<h1>Proste działania</h1>
+<h3>Kociszewska 3F</h3>
+<label for="a">Podaj pierwszą liczbę:</label> <input type="number" id="a">
+<br><br>
+<label for="b">Podaj drugą liczbę:</label> <input type="number" id="b">
+<br><br>
+<input type="button" value="DODAWANIE" onclick="suma_koc()">
+<input type="button" value="ODEJMOWANIE" onclick="roznica_koc()">
+<input type="button" value="MNOŻENIE" onclick="iloczyn_koc()">
+<input type="button" value="DZIELENIE" onclick="iloraz_koc()">
+<input type="button" value="TEORIA-Kociszewska" onclick="teoria_koc()">
+<div id="wynik" style="margin-top:20px;"></div>
+<script>
+function suma_koc()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+var suma_koc = a + b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma_koc;
+}
+//alert(a);
+//console.log(a);
+}
+function roznica_koc()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+var roznica_koc = a - b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica_koc;
+}
+}
+function iloczyn_koc()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+var iloczyn_koc = a * b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn_koc;
+}
+}
+function iloraz_koc()
+{
+var a = document.getElementById("a").value;
+var b = document.getElementById("b").value;
+if (a == "" || b == "")
+{
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
+} else
+{
+a = parseFloat(a);
+b = parseFloat(b);
+if (b == 0)
+{
+document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
+}
+else
+{
+var iloraz_koc = a / b;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz_koc;
+}
+}
+}
+   function teoria_koc() 
+   {
+document.write("<font color=green size=4>pierwsza linia teorii</font>"+"<br>");
+document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>labelfor=</font>"+"<font color=red size=4>&quot;</font>");
+document.write("<font color=red size=4>a</font>"+"<font color=red size=4>&quot;</font>"+"<fontcolor=red size=4>&gt;</font>");
+document.write("<font color=red size=4>Podaj pierwszą liczbę:</font>");
+document.write("<font color=red size=4>&lt;</font>"+"<font color=redsize=4>/label</font>"+"<font color=red size=4>&gt;</font>");
+document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>inputtype=</font>"+"<font color=red size=4>&quot;</font>");
+document.write("<font color=red size=4>number</font>"+"<font color=redsize=4>&quot;</font>");
+document.write("<font color=red size=4> id=</font>"+"<font color=red size=4>&quot;</font>");
+document.write("<font color=red size=4>a</font>"+"<font color=red size=4>&quot;</font>"+"<fontcolor=red size=4>&gt;</font>"+"<br>");
+document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>");
+document.write("<font color=red size=4>wykonanie numerycznego pola formularza z opisem 'Podaj pierwszą liczbę:' a nazwa pola to 'a' </font>"+"<br>");
+}
+   function okno_zamknij()
+             { 
+              window.close() 
+             } 
+</script>
+   <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>
+            </textarea>
+        </form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+    </body> 
+</html>
