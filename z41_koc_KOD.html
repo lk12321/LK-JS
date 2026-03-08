@@ -29,7 +29,7 @@ h1 { text-transform: uppercase; }
 <input type="button" value="MNOŻENIE" onclick="iloczyn_koc()">
 <input type="button" value="DZIELENIE" onclick="iloraz_koc()">
 <input type="button" value="TEORIA-Kociszewska" onclick="teoria_koc()">
-<div id="wynik.toFixed(2)" style="margin-top:20px;"></div>
+<div id="wynik" style="margin-top:20px;"></div>
 <script>
 function suma_koc()
 {
@@ -37,16 +37,14 @@ var a = document.getElementById("a").value;
 var b = document.getElementById("b").value;
 if (a == "" || b == "")
 {
-document.getElementById("wynik.toFixed(2)").innerHTML = "Proszę uzupełnić obie liczby.";
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
 } else
 {
 a = parseFloat(a);
 b = parseFloat(b);
 var suma_koc = a + b;
-document.getElementById("wynik.toFixed(2)").innerHTML = "Wynik działania wynosi: " + suma_koc;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + suma_koc.toFixed(2);
 }
-//alert(a);
-//console.log(a);
 }
 function roznica_koc()
 {
@@ -54,13 +52,13 @@ var a = document.getElementById("a").value;
 var b = document.getElementById("b").value;
 if (a == "" || b == "")
 {
-document.getElementById("wynik.toFixed(2)").innerHTML = "Proszę uzupełnić obie liczby.";
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
 } else
 {
 a = parseFloat(a);
 b = parseFloat(b);
 var roznica_koc = a - b;
-document.getElementById("wynik.toFixed(2)").innerHTML = "Wynik działania wynosi: " + roznica_koc;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + roznica_koc.toFixed(2);
 }
 }
 function iloczyn_koc()
@@ -69,13 +67,13 @@ var a = document.getElementById("a").value;
 var b = document.getElementById("b").value;
 if (a == "" || b == "")
 {
-document.getElementById("wynik.toFixed(2)").innerHTML = "Proszę uzupełnić obie liczby.";
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
 } else
 {
 a = parseFloat(a);
 b = parseFloat(b);
 var iloczyn_koc = a * b;
-document.getElementById("wynik.toFixed(2)").innerHTML = "Wynik działania wynosi: " + iloczyn_koc;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloczyn_koc.toFixed(2);
 }
 }
 function iloraz_koc()
@@ -84,19 +82,19 @@ var a = document.getElementById("a").value;
 var b = document.getElementById("b").value;
 if (a == "" || b == "")
 {
-document.getElementById("wynik.toFixed(2)").innerHTML = "Proszę uzupełnić obie liczby.";
+document.getElementById("wynik").innerHTML = "Proszę uzupełnić obie liczby.";
 } else
 {
 a = parseFloat(a);
 b = parseFloat(b);
 if (b == 0)
 {
-document.getElementById("wynik.toFixed(2)").innerHTML = "Nie wolno dzielić przez zero.";
+document.getElementById("wynik").innerHTML = "Nie wolno dzielić przez zero.";
 }
 else
 {
 var iloraz_koc = a / b;
-document.getElementById("wynik.toFixed(2)").innerHTML = "Wynik działania wynosi: " + iloraz_koc;
+document.getElementById("wynik").innerHTML = "Wynik działania wynosi: " + iloraz_koc.toFixed(2);
 }
 }
 }
