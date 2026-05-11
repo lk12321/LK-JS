@@ -1,0 +1,22 @@
+<html>
+  <meta charset="utf-8">
+<body>
+<div syle="color:red;font-size:50px;">
+  <script language="JavaScript">
+  do {
+    var liczba1=prompt("n=","");
+    var n_koc=parseFloat(liczba1);
+  }
+    while(n_koc<0);
+    if(n_koc==0) {silnia_koc=1;
+                  document.write("n="+n_koc+"<br>"+n_koc+"!="+silnia_koc);
+                 }
+      if(n_koc>0) {silnia_koc=1;
+                   for(i_koc=1;i_koc<=n_koc;i_koc++)
+                   { silnia_koc=silnia_koc*i_koc; }
+                   document.write("n="+n_koc+"<br>"+n_koc+"!="+silnia_koc);
+                  }
+  </script>
+</div>
+</body>
+</html>
