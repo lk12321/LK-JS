@@ -1,6 +1,6 @@
 <html>
   <meta charset="utf-8">
-<body>
+<body bgcolor=#ffb3d5>
 <div syle="color:red;font-size:50px;">
   <script language="JavaScript">
   do {
@@ -14,9 +14,12 @@
       if(n_koc>0) {silnia_koc=1;
                    for(i_koc=1;i_koc<=n_koc;i_koc++)
                    { silnia_koc=silnia_koc*i_koc; }
-                   document.write("n="+n_koc+"<br>"+n_koc+"!="+silnia_koc);
+                   document.write("n="+n_koc+"<br>"+n_koc+"!="+silnia_koc+"<br><br>");
                   }
+          function okno_zamknij()
+             { window.close()  }
   </script>
 </div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
 </body>
 </html>
