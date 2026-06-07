@@ -1,0 +1,22 @@
+<html>
+<meta charset="UTF-8">
+<body bgcolor=#ffb3d5>
+  <script language="JavaScript">
+var liczba_koc=0;
+    for (var i_koc=11; i_koc <= 26; i_koc++) {
+      var pierw_2_koc = Math.sqrt(i_koc);
+      var pierw_4_koc = Math.sqrt(pierw_2_koc);
+  document.write("I="+i_koc+" pierw_2("+i_koc+")="+pierw_2_koc.toFixed(2)+" pierw_4("+i_koc+")="+pierw_4_koc.toFixed(2)+"<br>");
+  liczba_koc++;
+    if (liczba_koc % 3 == 0) {
+  document.write("<br>");
+    }
+}
+    function okno_zamknij() 
+ {
+ window.close()
+ } 
+</script>
+  <br><br><input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
