@@ -1,0 +1,40 @@
+<html>
+<meta charset="UTF-8">
+<body bgcolor=#ffb3d5>
+<script language="JavaScript">
+var a_koc = parseInt(prompt("wysokość a="));
+var b_koc = parseInt(prompt("szerokość b="));
+
+for (var i_koc = 1; i_koc <= b_koc; i_koc++)
+{
+    document.write("*");
+}
+document.write("<br>");
+
+var wiersz_koc = "*";
+
+for (var i_koc = 1; i_koc <= (b_koc - 2); i_koc++)
+{
+    wiersz_koc = wiersz_koc + "&nbsp&nbsp";
+}
+
+wiersz_koc = wiersz_koc + "*";
+
+for (var i_koc = 1; i_koc <= a_koc - 2; i_koc++)
+{
+    document.write(wiersz_koc + "<br>");
+}
+
+for (var i_koc = 1; i_koc <= b_koc; i_koc++)
+{
+    document.write("*");
+}
+  
+ function okno_zamknij()
+             {
+window.close() 
+             }
+</script>
+  <br><br><input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>
