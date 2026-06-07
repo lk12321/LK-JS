@@ -1,0 +1,20 @@
+<html>
+<meta charset="UTF-8">
+<body bgcolor=#ffb3d5>
+<div style="color:red;font-size:50px;">
+ <script language="JavaScript">
+                 function okno_zamknij() 
+ {
+ window.close()
+ } 
+  var suma_koc=0;
+  for (var i_koc= 1; i_koc <= 1000000; i_koc++)
+  {
+    suma_koc=suma_koc+1/i_koc;
+  }
+document.write("Suma wynosi= "+suma_koc+);
+</script>
+</div>
+   <br><br><input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
