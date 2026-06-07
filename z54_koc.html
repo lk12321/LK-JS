@@ -1,0 +1,33 @@
+<html>
+<meta charset="UTF-8">
+<body bgcolor=#ffb3d5>
+ <script language="JavaScript">
+  var a_koc= 8;
+  var b_koc= 24;
+  
+  for (var i_koc= 1; i_koc <= b_koc; i_koc++)
+  {
+    document.write("*");
+  }
+  document.write("<br>");
+  for (var i_koc= 1; i_koc <= a_koc-2; i_koc++)
+  {
+    document.write("*");
+    for (var j_koc= 1; j_koc <= b_koc-2; j_koc++)
+    {
+      document.write("&nbsp;");
+    }
+    document.write("*<br>");
+  }
+  for (var i_koc= 1; i_koc <= b_koc; i_koc++)
+  {
+    document.write("*");
+  }
+   function okno_zamknij()
+             {
+window.close() 
+             }
+</script>
+ <br><br>  <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>
