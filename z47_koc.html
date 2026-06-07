@@ -1,0 +1,31 @@
+<html>
+<meta charset="UTF-8">
+<body bgcolor=#ffb3d5>
+      <script language="JavaScript">
+              function okno_zamknij() 
+ {
+ window.close()
+ }      
+    var zmienna_koc=parseInt(prompt("podaj liczbę (zmienna)=",""));
+        
+  document.write("Ilość wykonania pętli = 13<br>");
+  document.write("Wielkość liter = 42px<br><br>");
+        
+        if (zmienna_koc % 2 == 0) 
+        {
+          for (var i_koc= 1; i_koc <= 13; i_koc++)
+          {
+            document.write("<p style='color:blue;font-size:42px;'>Kociszewska</p>");
+          }
+        }
+        else
+        {
+          for (var i_koc = 1; i_koc <= 13; i_koc++)
+          {
+            document.write("<p style='color:green;font-size:42px'>Lena</p>");
+          }
+        }
+      </script>
+<br><input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
