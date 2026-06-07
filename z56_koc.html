@@ -2,38 +2,32 @@
 <meta charset="UTF-8">
 <body bgcolor=#ffb3d5>
  <script language="JavaScript">
-var imie_koc = prompt("podaj imię="); 
-var nazwisko_koc = prompt("podaj nazwisko=");
+var imie_koc=prompt("podaj imię=",""); 
+var nazwisko_koc=prompt("podaj nazwisko=","");
 
-var a_koc= (nazwisko_koc.length % 4) + 5;
-var b_koc = (imie_koc.length % 6) + 20;
+var a_koc=(nazwisko_koc.length % 4)+ 5;
+var b_koc=(imie_koc.length % 6)+ 20;
+  document.write("a= "+a_koc+"<br>");
+  document.write("b= "+b_koc+"<br><br>");
 
-document.write("a= " + a_koc + "<br>");
-document.write("b= " + b_koc + "<br><br>");
-
-for (var i_koc = 1; i_koc <= b_koc; i_koc++)
+  for (var i_koc= 1; i_koc <= b_koc; i_koc++)
 {
-    document.write("*");
+ document.write("*");
 }
-document.write("<br>");
-
-for (var i_koc = 1; i_koc <= a_koc - 2; i_koc++)
+  document.write("<br>");
+  for (var i_koc= 1; i_koc <= a_koc - 2; i_koc++)
 {
-    document.write("*");
-
-    for (var j_koc = 1; j_koc <= b_koc - 2; j_koc++)
-    {
-        document.write("&nbsp&nbsp");
-    }
-
-    document.write("*<br>");
+ document.write("*");
+ for (var j_koc= 1; j_koc <= b_koc - 2; j_koc++)
+ {
+  document.write("&nbsp&nbsp");
+ }
+ document.write("*<br>");
 }
-
-for (var i_koc = 1; i_koc <= b_koc; i_koc++)
+  for (var i_koc= 1; i_koc <= b_koc; i_koc++)
 {
-    document.write("*");
+ document.write("*");
 }
-  
   function okno_zamknij()
              {
 window.close() 
