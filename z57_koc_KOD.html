@@ -1,0 +1,56 @@
+<html>
+    <script type="text/javascript">
+         function okno_zamknij()
+             {
+window.close() 
+             }
+    </script>
+    <body bgcolor=#ffb3d5>
+        <form>
+            <textarea name="kociszewska" cols="80" rows="44" readonly> 
+<html>
+<meta charset="UTF-8">
+<body bgcolor=#ffb3d5>
+ <script language="JavaScript">
+do {
+  var l1_t_koc=parseInt(prompt("podaj pierwszą liczbę z przedziału <20,60>=",""));
+    if (l1_t_koc<20 || l1_t_koc>60) {
+      alert("liczba nie należy do przedziału <20,60>");
+    }
+}
+  while (l1_t_koc<20 || l1_t_koc>60);
+do {
+  var l2_t_koc=parseInt(prompt("podaj drugą liczbę z przedziału <20,60>=",""));
+  if (l2_t_koc<20 || l2_t_koc>60) {
+    alert("liczba nie należy do przedziału <20,60>");
+  }
+}
+while (l2_t_koc<20 || l2_t_koc>60);
+var pocz_koc=parseInt(prompt("początkowa wielkość tekstu=",""));
+var tekst_koc=prompt("dowolny tekst=","");
+  if (l1_t_koc<l2_t_koc) {
+  for (var i_koc=pocz_koc; i_koc <= 100; i_koc += 5) {
+    document.write("<p style=\"font-size:"+i_koc+"px; color:black;\">"+tekst_koc+"</p>");
+    }
+}
+  else if (l2_t_koc<l1_t_koc) {
+    for (var i_koc=pocz_koc; i_koc >= 0; i_koc -= 5) {
+      document.write("<p style=\"font-size:"+i_koc+"px; color:black;\">"+tekst_koc+"</p>");
+    }
+  }
+else {
+  document.write("<p style=\"font-size:"+pocz_koc+"px; color:black;\">"+tekst_koc+"</p>");
+}
+    function okno_zamknij() 
+ {
+ window.close()
+ } 
+</script>
+  <br><br><input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
+            </textarea>
+        </form>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+    </body> 
+</html>
