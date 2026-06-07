@@ -1,0 +1,21 @@
+<html>
+<meta charset="UTF-8">
+<body bgcolor=#ffb3d5>
+ <script language="JavaScript">
+  var licznik_koc=0;
+for (var i_koc=0; i_koc <= 39; i_koc++) {
+  var w_koc=i_koc * i_koc + i_koc + 41;
+     document.write("i=" + i_koc + " w(" + i_koc + ")=" + w_koc + "<br>");
+     licznik_koc++;
+  if (licznik_koc % 5 == 0) {
+    confirm("Naciśnij OK aby kontynuować");
+  }
+}
+  function okno_zamknij() 
+ {
+ window.close()
+ } 
+</script>
+  <br><br><input type="button" value="zamknij okno" onclick="okno_zamknij()">
+</body>
+</html>
